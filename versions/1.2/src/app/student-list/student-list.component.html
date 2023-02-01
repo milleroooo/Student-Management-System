@@ -1,0 +1,171 @@
+<div class="container-fluid " overflow-auto>
+  <div class="row" overflow-auto>
+    <div class="col-sm-auto bg-light sticky-top">
+      <div class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top">
+        <a href="/" class="d-block p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip"
+          data-bs-placement="right" data-bs-original-title="Icon-only">
+          <img src="../assets/img/favicon-32x32.png" alt="" srcset="">
+        </a>
+        <ul
+          class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center">
+          <li class="nav-item">
+            <a routerLink="/dashboard" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
+              data-bs-placement="right" data-bs-original-title="Home">
+              <i class="bi-house fs-3"></i>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/addStudent" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
+              data-bs-placement="right" data-bs-original-title="Dashboard">
+              <i class="bi bi-person-plus fs-3"></i>
+            </a>
+          </li>
+          <li>
+            <a routerLink="/addMark" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip"
+              data-bs-placement="right" data-bs-original-title="Orders">
+              <i class="bi bi-cloud-plus fs-3"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right"
+              data-bs-original-title="Products">
+              <i class="bi bi-book fs-3"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right"
+              data-bs-original-title="Customers">
+              <i class="bi-people fs-3"></i>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              <img src="https://i.imgur.com/hczKIze.jpg" width="40" class="rounded-circle">
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#" (click)="OnUserLogout()">Log out</a>
+              <a class="dropdown-item" href="#">Settings</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-sm p-3 min-vh-100">
+      <!--Student-list content-->
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-end gap-2 mb-3">
+          <div>
+            <ul class="nav nav-pills">
+              <li class="nav-item">
+                <a aria-current="page" href="#" class="router-link-active router-link-exact-active nav-link active"
+                  data-bs-toggle="tooltip" data-bs-placement="top" title="" data-bs-original-title="List"
+                  aria-label="List">
+                  <i class="bx bx-list-ul"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link" data-bs-toggle="tooltip" data-bs-placement="top" title=""
+                  data-bs-original-title="Grid" aria-label="Grid"><i class="bx bx-grid-alt"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <a routerLink="/addStudent" data-bs-toggle="modal" data-bs-target=".add-new" class="btn btn-primary"><i
+                class="bx bx-plus me-1"></i> Add New</a>
+          </div>
+          <div class="dropdown">
+            <a class="btn btn-link text-muted py-1 font-size-16 shadow-none dropdown-toggle" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false"><i class="bx bx-dots-horizontal-rounded"></i></a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"
+        integrity="sha256-2XFplPlrFClt0bIdPgpz8H7ojnk10H69xRqd9+uTShA=" crossorigin="anonymous" />
+      <div class="container mt-3 mb-4" overflow-auto>
+        <div class="col-lg-14 mt-4 mt-lg-0">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="user-dashboard-info-box table-responsive mb-0 bg-white p-4 shadow-sm rounded-7">
+                <table class="table manage-students-top mb-0">
+                  <thead>
+                    <tr>
+                      <th class="text-center"><b>#</b></th>
+                      <th class="text-center"><b>Student Name</b></th>
+                      <th class="text-center"><b>Profile</b></th>
+                      <th class="text-center"><b>Email</b></th>
+                      <th class="action text-right"><b>Action</b></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="students-list" *ngFor="let Student of studentsList; let i = index">
+                      <td>
+                        {{i+1}}
+                      </td>
+                      <td class="title">
+                        <div class="thumb">
+                          <img class="img-fluid" src="{{Student.image}}" alt="">
+                        </div>
+                        <div class="student-list-details">
+                          <div class="student-list-info">
+                            <div class="student-list-title">
+                              <h5 class="mb-0">{{Student.first_name}} {{Student.last_name}}</h5>
+                            </div>
+                            <div class="student-list-option">
+                              <ul class="list-unstyled">
+                                <li><i class="bi bi-telephone-fill"
+                                    style="font-size: 1rem; color:rgb(240, 240, 64);"></i> {{Student.phone_number}}</li>
+                                <li><i class="bi bi-info-circle-fill"
+                                    style="font-size: 1rem; color:cornflowerblue;"></i> {{Student.age}} years old</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </td>
+                      <td><span class="badge badge-success">{{Student.proffesion}}</span></td>
+                      <td>
+                        {{Student.email}}
+                      </td>
+                      <td>
+                        <ul class="list-unstyled mb-0 d-flex justify-content-end">
+                          <li><span id="boot-icon" class="bi bi-trash-fill"
+                              style="font-size: 1.2rem; color: rgb(255, 0, 0);" (click)="OnDeletedStudent(Student)"></span></li>
+                          <li><span id="boot-icon" class="bi bi-pencil-fill"
+                              style="font-size: 1.2rem; color: rgb(73, 219, 32);"></span></li>
+                          <li><span id="boot-icon" class="bi bi-eye-fill"
+                              style="font-size: 1.2rem; color:cornflowerblue;" [routerLink]="['/view-student', Student.id]"></span></li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="row g-0 align-items-center pb-4 my-3">
+                  <div class="col-sm-6">
+                    <div>
+                      <p class="mb-sm-0">Showing 1 to 10</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="float-sm-end">
+                      <ul class="pagination mb-sm-0">
+                        <li class="page-item disabled">
+                          <a href="#" class="page-link"><i class="mdi mdi-chevron-left"></i></a>
+                        </li>
+                        <li class="page-item active"><a href="#" class="page-link">1</a></li>
+                        <li class="page-item"><a href="#" class="page-link">2</a></li>
+                        <li class="page-item"><a href="#" class="page-link">3</a></li>
+                        <li class="page-item"><a href="#" class="page-link">4</a></li>
+                        <li class="page-item"><a href="#" class="page-link">5</a></li>
+                        <li class="page-item">
+                          <a href="#" class="page-link"><i class="mdi mdi-chevron-right"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>

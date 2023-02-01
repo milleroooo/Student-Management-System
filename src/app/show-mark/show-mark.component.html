@@ -1,0 +1,168 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-auto bg-light sticky-top">
+      <div
+        class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top"
+      >
+        <a
+          routerLink="/Dashboard"
+          class="d-block p-3 link-dark text-decoration-none"
+          title=""
+          data-bs-toggle="tooltip"
+          data-bs-placement="right"
+          data-bs-original-title="Icon-only"
+        >
+          <img src="../assets/img/favicon-32x32.png" alt="" srcset="" />
+        </a>
+        <ul
+          class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center"
+        >
+          <li class="nav-item">
+            <a
+              routerLink="/dashboard"
+              class="nav-link py-3 px-3 bg-light"
+              style="color: grey"
+              title=""
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+              data-bs-original-title="Home"
+            >
+              <i class="bi-house fs-3"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              routerLink="/addStudent"
+              class="nav-link py-3 px-3 bg-light"
+              title=""
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+              data-bs-original-title="Dashboard"
+            >
+              <i class="bi bi-person-plus fs-3"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              routerLink="/actionMark"
+              class="nav-link py-3 px-3 bg-light"
+              title=""
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+              data-bs-original-title="Orders"
+              data-bs-original-title="addMark"
+            >
+              <i class="bi bi-cloud-plus fs-3"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="nav-link py-3 px-3 bg-light"
+              title=""
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+              data-bs-original-title="Products"
+            >
+              <i class="bi bi-book fs-3"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              routerLink="/studentList"
+              class="nav-link py-3 px-3 bg-light"
+              title=""
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+              data-bs-original-title="Customers"
+            >
+              <i class="bi-people fs-3"></i>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle bg-light"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <img
+                src="https://i.imgur.com/hczKIze.jpg"
+                width="40"
+                class="rounded-circle"
+              />
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#" (click)="OnUserLogout()"
+                >Log out</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-sm p-3 min-vh-100">
+      <!--student info content -->
+      <section style="background-color: white" class="rounded-7">
+        <i
+          class="bi bi-arrow-left my-3 p-3"
+          style="font-size: 2.5rem"
+          routerLink="/actionMark"
+        ></i>
+        <div class="container py-1">
+          <h1 class="text-center">
+            <img
+              src="{{ studentObj.image }}"
+              class="img-fluid"
+              alt="Sample image"
+            />
+            <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
+              {{ studentObj.first_name }} {{ studentObj.last_name }}'s Marks
+            </p>
+          </h1>
+          <div class="row">
+            <!--mark-card content -->
+            <div class="col-13">
+              <div class="about-text go-to">
+                <div class="col col-xl-12">
+                  <div class="card mb-5" style="border-radius: 15px">
+                    <div class="container">
+                      <div class="row">
+                          <div class="col-lg-3 py-2" *ngFor="let mark of markList">
+                              <div class="card card-margin">
+                                  <div class="card-body">
+                                      <div class="widget-49 py-2">
+                                          <div class="widget-49-title-wrapper">
+                                              <div class="widget-49-date-primary">
+                                                  <span class="widget-49-date-day">{{mark.mark}}</span>
+                                              </div>
+                                              <div class="widget-49-meeting-info">
+                                                  <span class="widget-49-pro-title"><h2><span class="badge badge-warning">{{mark.markType}}</span></h2></span>
+                                                  <span class="widget-49-meeting-time">{{mark.date}}</span>
+                                              </div>
+                                          </div>
+                                          <h5 class="widget-49-meeting-points">
+                                              {{mark.description}}
+                                          </h5>
+                                          <div class="widget-49-meeting-action">
+                                              <a class="btn btn-danger btn-flash-border-primary" (click)="OnDeletedMark()">delete</a>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+
+                      </div>
+                      </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

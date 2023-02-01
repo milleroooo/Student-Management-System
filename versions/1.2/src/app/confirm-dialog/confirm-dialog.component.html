@@ -1,0 +1,16 @@
+<div class="modal-header">
+  <h4 class="modal-title">{{ title }}</h4>
+    <button type="button" class="close" aria-label="Close" (click)="dismiss()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+   {{ message }}
+  </div>
+    <div class="modal-footer" *ngFor="let Student of studentsList;">
+      <div class="modal-lower-footer" *ngIf="selectedStudent === Student">
+        {{Student.first_name}} - {{Student.last_name}}
+        <button type="button" class="btn btn-danger" (click)="decline()">{{ btnCancelText }}</button>
+        <button type="button" class="btn btn-primary" (click)="accept(Student)">{{ btnOkText }}</button>
+      </div>
+  </div>

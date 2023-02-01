@@ -1,0 +1,334 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-auto bg-light sticky-top">
+      <div
+        class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top"
+      >
+        <a
+          routerLink="/Dashboard"
+          class="d-block p-3 link-dark text-decoration-none"
+          title=""
+          data-bs-toggle="tooltip"
+          data-bs-placement="right"
+          data-bs-original-title="Icon-only"
+        >
+          <img src="../assets/img/favicon-32x32.png" alt="" srcset="" />
+        </a>
+        <ul
+          class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center"
+        >
+          <li class="nav-item">
+            <a
+              routerLink="/dashboard"
+              class="nav-link py-3 px-3 bg-light"
+              style="color: grey"
+              title=""
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+              data-bs-original-title="Home"
+            >
+              <i class="bi-house fs-3"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              routerLink="/addStudent"
+              class="nav-link py-3 px-3 bg-light"
+              title=""
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+              data-bs-original-title="Dashboard"
+            >
+              <i class="bi bi-person-plus fs-3"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              routerLink="/actionMark"
+              class="nav-link py-3 px-3 bg-light"
+              title=""
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+              data-bs-original-title="Orders"
+              data-bs-original-title="addMark"
+            >
+              <i class="bi bi-cloud-plus fs-3"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="#"
+              class="nav-link py-3 px-3 bg-light"
+              title=""
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+              data-bs-original-title="Products"
+            >
+              <i class="bi bi-book fs-3"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              routerLink="/studentList"
+              class="nav-link py-3 px-3 bg-light"
+              title=""
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+              data-bs-original-title="Customers"
+            >
+              <i class="bi-people fs-3"></i>
+            </a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle bg-light"
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <img
+                src="https://i.imgur.com/hczKIze.jpg"
+                width="40"
+                class="rounded-circle"
+              />
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#" (click)="OnUserLogout()"
+                >Log out</a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-sm p-3 min-vh-100">
+      <!--add-mark content -->
+      <section style="background-color: white" class="rounded-7">
+        <i
+          class="bi bi-arrow-left my-3 p-3"
+          style="font-size: 2.5rem"
+          routerLink="/actionMark"
+        ></i>
+        <div class="container py-1">
+          <h1 class="text-center">
+            <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">
+              Add New Mark
+            </p>
+          </h1>
+          <div class="row align-items-center">
+            <img
+              src="https://www.platoforms.com/assets/images/2022/2022-02-25-responsive-pdf-form.png"
+              class="img-left"
+              alt="Sample image"
+            />
+            <!--card content -->
+            <div class="col-lg-6">
+              <div class="about-text go-to">
+                <div class="col col-xl-10">
+                  <div class="card mb-5" style="border-radius: 15px">
+                    <div class="card-body p-4 justify-content-center">
+                      <div class="col-lg-6 justify-content-center">
+                        <div class="about-avatar">
+                          <img
+                            src="{{ studentObj.image }}"
+                            class="img-fluid rounded-circle me-7"
+                            title=""
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <h3 class="mb-3">
+                        {{ studentObj.first_name }} {{ studentObj.last_name }}
+                      </h3>
+                      <p class="small mb-0">
+                        <i class="far fa-star fa-lg"></i>
+                        <span class="mx-2">|</span> Created by
+                        <strong>Student Management System</strong> on 11 April ,
+                        2021
+                      </p>
+                      <hr class="my-4" />
+                      <!--radio input content -->
+                      <div class="btn-group justify-content-center">
+                        <input
+                          mdbRadio
+                          type="radio"
+                          class="btn-check"
+                          name="option"
+                          id="option1"
+                          autocomplete="off"
+                          value="1"
+                          [(ngModel)]="mark"
+                        />
+                        <label
+                          class="btn btn-danger"
+                          style="font-size: 1.5rem"
+                          for="option1"
+                          >1</label
+                        >
+                        <input
+                          mdbRadio
+                          type="radio"
+                          class="btn-check"
+                          name="option"
+                          id="option2"
+                          value="2"
+                          autocomplete="off"
+                          [(ngModel)]="mark"
+                        />
+                        <label
+                          class="btn btn-primary"
+                          style="font-size: 1.5rem"
+                          for="option2"
+                          >2</label
+                        >
+                        <input
+                          mdbRadio
+                          type="radio"
+                          class="btn-check"
+                          name="option"
+                          id="option3"
+                          value="3"
+                          autocomplete="off"
+                          [(ngModel)]="mark"
+                        />
+                        <label
+                          class="btn btn-warning"
+                          style="font-size: 1.5rem"
+                          for="option3"
+                          >3</label
+                        >
+                        <input
+                          mdbRadio
+                          type="radio"
+                          class="btn-check"
+                          name="option"
+                          id="option4"
+                          value="4"
+                          autocomplete="off"
+                          [(ngModel)]="mark"
+                        />
+                        <label
+                          class="btn btn-success"
+                          style="font-size: 1.5rem"
+                          for="option4"
+                          >4</label
+                        >
+                        <input
+                          mdbRadio
+                          type="radio"
+                          class="btn-check"
+                          name="option"
+                          id="option5"
+                          value="5"
+                          autocomplete="off"
+                          [(ngModel)]="mark"
+                        />
+                        <label
+                          class="btn btn-dark"
+                          style="font-size: 1.5rem"
+                          for="option5"
+                          >5</label
+                        >
+                        <input
+                          mdbRadio
+                          type="radio"
+                          class="btn-check"
+                          name="option"
+                          id="option6"
+                          value="6"
+                          autocomplete="off"
+                          [(ngModel)]="mark"
+                        />
+                        <label
+                          class="btn btn-info"
+                          style="font-size: 1.5rem"
+                          for="option6"
+                          >6</label
+                        >
+                      </div>
+                      <hr class="my-4" />
+                      <div class="btn-group justify-content-center text-center">
+                        <input
+                          mdbRadio
+                          type="radio"
+                          class="btn-check"
+                          name="optionType"
+                          id="optionType1"
+                          autocomplete="off"
+                          value="Exam"
+                          [(ngModel)]="markType"
+                        />
+                        <label
+                          class="btn btn-danger"
+                          style="font-size: 1rem"
+                          for="optionType1"
+                          >Exam</label
+                        >
+                        <input
+                          mdbRadio
+                          type="radio"
+                          class="btn-check"
+                          name="optionType"
+                          id="optionType2"
+                          value="Homework"
+                          autocomplete="off"
+                          [(ngModel)]="markType"
+                        />
+                        <label
+                          class="btn btn-info text-center"
+                          style="font-size: 1rem"
+                          for="optionType2"
+                          >Homework</label
+                        >
+                        <input
+                          mdbRadio
+                          type="radio"
+                          class="btn-check"
+                          name="optionType"
+                          id="optionType3"
+                          value="Activity"
+                          autocomplete="off"
+                          [(ngModel)]="markType"
+                        />
+                        <label
+                          class="btn btn-warning"
+                          style="font-size: 1rem"
+                          for="optionType3"
+                          >Activity</label
+                        >
+                      </div>
+                      <hr class="my-3" />
+                      <label for="datePicker">Pick date:</label>
+                      <br />
+                      <input type="date" name="" id="datePicker" [(ngModel)]="date" />
+                      <hr class="my-3" />
+                      <div class="form-group">
+                        <label for="exampleFormControlTextarea1"
+                          >Description:</label
+                        >
+                        <textarea
+                          class="form-control"
+                          id="exampleFormControlTextarea1"
+                          rows="2"
+                          name="description"
+                          [(ngModel)]="description"
+                        ></textarea>
+                      </div>
+                      <div class="justify-content-center">
+                        <button type="button" class="btn btn-outline-warning w-100"
+                          (click)="OnAddedMark()">Submit
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

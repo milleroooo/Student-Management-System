@@ -1,0 +1,146 @@
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-sm-auto bg-light sticky-top">
+          <div class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top">
+              <a href="/" class="d-block p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
+                <img src="../assets/img/favicon-32x32.png" alt="" srcset="">
+              </a>
+              <ul class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center">
+                  <li class="nav-item">
+                      <a routerLink="/dashboard" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
+                          <i class="bi-house fs-3"></i>
+                      </a>
+                  </li>
+                  <li>
+                      <a routerLink="/addStudent" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
+                        <i class="bi bi-person-plus fs-3"></i>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Orders">
+                        <i class="bi bi-cloud-plus fs-3"></i>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Products">
+                        <i class="bi bi-book fs-3"></i>
+                      </a>
+                  </li>
+                  <li>
+                      <a routerLink="/studentList" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Customers">
+                          <i class="bi-people fs-3"></i>
+                      </a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img src="https://i.imgur.com/hczKIze.jpg" width="40" class="rounded-circle">
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#" (click)="OnUserLogout()">Log out</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <div class="col-sm p-3 min-vh-100">
+          <!--add-student content -->
+          <section class="vh-100">
+            <div class="container h-100">
+              <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-lg-12 col-xl-11">
+                  <div class="card text-black">
+                    <div class="card-body p-md-5">
+                      <div class="row justify-content-center">
+                        <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+                          <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Add New Student</p>
+
+                          <form class="mx-1 mx-md-4">
+
+                            <div class="d-flex flex-row align-items-center mb-4">
+                              <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                              <div class="form-outline flex-fill mb-0">
+                                <input type="text" id="form3Example1c" class="form-control" name="first_name" [(ngModel)]="first_name">
+                                <label class="form-label" for="form3Example1c">First Name</label>
+                              </div>
+                            </div>
+
+                            <div class="d-flex flex-row align-items-center mb-4">
+                              <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                              <div class="form-outline flex-fill mb-0">
+                                <input type="text" id="form3Example1c" class="form-control" name="last_name" [(ngModel)]="last_name" />
+                                <label class="form-label" for="form3Example1c">Last Name</label>
+                              </div>
+                            </div>
+
+                            <div class="d-flex flex-row align-items-center mb-4">
+                              <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                              <div class="form-outline flex-fill mb-0">
+                                <input type="email" id="form3Example3c" class="form-control" name="age" [(ngModel)]="age" />
+                                <label class="form-label" for="form3Example3c">Age</label>
+                              </div>
+                            </div>
+
+                            <div class="d-flex flex-row align-items-center mb-4">
+                              <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                              <div class="form-outline flex-fill mb-0">
+                                <input type="email" id="form3Example3c" class="form-control" name="email" [(ngModel)]="email" />
+                                <label class="form-label" for="form3Example3c">Email</label>
+                              </div>
+                            </div>
+
+                            <div class="d-flex flex-row align-items-center mb-4">
+                              <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                              <div class="form-outline flex-fill mb-0">
+                                <input type="email" id="form3Example3c" class="form-control" name="phone_number" [(ngModel)]="phone_number" />
+                                <label class="form-label" for="form3Example3c">Phone Number</label>
+                              </div>
+                            </div>
+
+                            <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+
+                              <h6 class="mb-0 me-4">Gender: </h6>
+
+                              <div class="form-check form-check-inline mb-0 me-4">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" name="first_name" id="femaleGender"
+                                  value="option1" [(ngModel)]="gender" />
+                                <label class="form-check-label" for="femaleGender">Female</label>
+                              </div>
+
+                              <div class="form-check form-check-inline mb-0 me-4">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="maleGender"
+                                  value="option2" [(ngModel)]="gender" />
+                                <label class="form-check-label" for="maleGender">Male</label>
+                              </div>
+
+                              <div class="form-check form-check-inline mb-0">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="otherGender"
+                                  value="option3" [(ngModel)]="gender" />
+                                <label class="form-check-label" for="otherGender">Other</label>
+                              </div>
+
+                            </div>
+
+                           <div class="d-flex justify-content-end pt-3 text-center">
+                            <button type="button" class="btn btn-light btn-lg" (click)="OnResetedForm()">Reset all</button>
+                            <button type="button" class="btn btn-warning btn-lg ms-2" (click)="OnAddedStudent()">Submit form</button>
+                          </div>
+
+                          </form>
+
+                        </div>
+                        <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+
+                          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                            class="img-fluid" alt="Sample image">
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>

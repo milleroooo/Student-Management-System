@@ -1,0 +1,11 @@
+Female:
+1.https://gregarchitekci.pl/wp-content/uploads/2020/07/Karolina_Meissner_Wiernasz.png
+2.https://gregarchitekci.pl/wp-content/uploads/2020/07/Karolina_Konopnicka.png
+3.https://gregarchitekci.pl/wp-content/uploads/2020/07/Urszula_Matkowska.png
+4.https://gregarchitekci.pl/wp-content/uploads/2020/07/Magdalena_Fluder_Gorka-e1594794499540.png
+
+Male:
+1.https://gregarchitekci.pl/wp-content/uploads/2020/07/Lukasz_Uminski.png
+2.https://gregarchitekci.pl/wp-content/uploads/2021/04/Marcin_Macherzynski.png
+3.https://gregarchitekci.pl/wp-content/uploads/2021/04/Milosz_Mleczko.png
+4.https://gregarchitekci.pl/wp-content/uploads/2020/07/Adam_Krzysztofiak.png

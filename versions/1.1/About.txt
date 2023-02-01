@@ -1,0 +1,9 @@
+*Everything version 1.0 contained
+-dashboard
+-add-student component
+  +adding student to array and firebase
+
+-student-list component
+  +coded (displays an array)
+  +deleting student from array and firebase
+  +ready to style

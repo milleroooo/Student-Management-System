@@ -1,0 +1,5 @@
+*Everything version 1.1 contains
+-Student-List component done
+-Student-View component ready to build 
+  +fetches an student form firebase
+-Created add-marks component ready to code

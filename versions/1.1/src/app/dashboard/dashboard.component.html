@@ -1,0 +1,153 @@
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-sm-auto bg-light sticky-top">
+          <div class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top">
+              <a routerLink="/Dashboard" class="d-block p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
+                <img src="../assets/img/favicon-32x32.png" alt="" srcset="">
+              </a>
+              <ul class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center">
+                  <li class="nav-item">
+                      <a routerLink="/Dashboard" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
+                          <i class="bi-house fs-3"></i>
+                      </a>
+                  </li>
+                  <li>
+                      <a routerLink="/addStudent" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
+                        <i class="bi bi-person-plus fs-3"></i>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Orders">
+                        <i class="bi bi-cloud-plus fs-3"></i>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Products">
+                        <i class="bi bi-book fs-3"></i>
+                      </a>
+                  </li>
+                  <li>
+                      <a routerLink="/studentList" class="nav-link py-3 px-2" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Customers">
+                          <i class="bi-people fs-3"></i>
+                      </a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img src="https://i.imgur.com/hczKIze.jpg" width="40" class="rounded-circle">
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#" (click)="OnUserLogout()">Log out</a>
+                    </div>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <div class="col-sm p-3 min-vh-100">
+          <!--dashboard content -->
+          <section>
+            <div class="row">
+              <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between px-md-1">
+                      <div class="align-self-center">
+                        <i class="bi bi-pencil-fill text-info fa-3x"></i>
+                      </div>
+                      <div class="text-end">
+                        <h3>278</h3>
+                        <p class="mb-0">New Posts  dla picu tylko</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between px-md-1">
+                      <div class="align-self-center">
+                        <i class="bi bi-megaphone-fill text-warning fa-3x"></i>
+                      </div>
+                      <div class="text-end">
+                        <h3>156</h3>
+                        <p class="mb-0">New Announcements</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between px-md-1">
+                      <div class="align-self-center">
+                        <i class="bi bi-person-fill text-success fa-3x"></i>
+                      </div>
+                      <div class="text-end">
+                        <h3>410</h3>
+                        <p class="mb-0">Students</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-sm-6 col-12 mb-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="d-flex justify-content-between px-md-1">
+                      <div class="align-self-center">
+                        <i class="bi bi-book-fill text-danger fa-3x"></i>
+                      </div>
+                      <div class="text-end">
+                        <h3>43</h3>
+                        <p class="mb-0">Active Homeworks</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            </section>
+            <!--Best Student content -->
+            <div class="d-flex flex-row-reverse">
+              <div class="card bg-glass d-flex col-xl-4">
+                <div class="card-body px-4 py-5 px-md-5">
+                  <div class="text-center">
+                    <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Best Student</p>
+                  </div>
+                  <div class="py-3 text-center"><img src="https://i.imgur.com/hczKIze.jpg" width="100" class="rounded-circle">
+                    <h4 class="text-secondary">John Smith</h4>
+                    <div class="allergy"><span>Allergy</span></div>
+                    <div class="stats">
+                        <table class="table table-borderless">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex flex-column"> <span class="text-left head">DOB</span> <span class="text-left bottom">03/13/2016</span> </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex flex-column"> <span class="text-left head">Age</span> <span class="text-left bottom">22Y 4m</span> </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex flex-column"> <span class="text-left head">Weight</span> <span class="text-left bottom">168 lb</span> </div>
+                                    </td>
+                                    <td>
+                                        <div class="d-flex flex-column"> <span class="text-left head">Height</span> <span class="text-left bottom">5'9"</span> </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button type="button" class="btn btn-warning btn-lg ms-2">Show Details</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+

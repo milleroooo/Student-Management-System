@@ -1,0 +1,5 @@
+-connection with firebase
+-auth service( varify password, remind password, sign in with google, login, register)
+-toastr notifications
+-register/login/forgot-password/dashboard components
+-dashboard ready to code.

@@ -1,0 +1,158 @@
+<div class="container-fluid">
+  <div class="row">
+      <div class="col-sm-auto bg-light sticky-top">
+          <div class="d-flex flex-sm-column flex-row flex-nowrap bg-light align-items-center sticky-top">
+              <a routerLink="/Dashboard" class="d-block p-3 link-dark text-decoration-none" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Icon-only">
+                <img src="../assets/img/favicon-32x32.png" alt="" srcset="">
+              </a>
+              <ul class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap mb-auto mx-auto text-center align-items-center">
+                  <li class="nav-item">
+                      <a routerLink="/dashboard" class="nav-link py-3 px-3 bg-light" style="color: grey;" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Home">
+                          <i class="bi-house fs-3"></i>
+                      </a>
+                  </li>
+                  <li>
+                      <a routerLink="/addStudent" class="nav-link py-3 px-3 bg-light" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
+                        <i class="bi bi-person-plus fs-3"></i>
+                      </a>
+                  </li>
+                  <li>
+                      <a routerLink="/actionMark" class="nav-link py-3 px-3 bg-light" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Orders" data-bs-original-title="addMark">
+                        <i class="bi bi-cloud-plus fs-3"></i>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#" class="nav-link py-3 px-3 bg-light" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Products">
+                        <i class="bi bi-book fs-3"></i>
+                      </a>
+                  </li>
+                  <li>
+                      <a routerLink="/studentList" class="nav-link py-3 px-3 bg-light" title="" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Customers">
+                          <i class="bi-people fs-3"></i>
+                      </a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle bg-light" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <img src="https://i.imgur.com/hczKIze.jpg" width="40" class="rounded-circle">
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" href="#" (click)="OnUserLogout()">Log out</a>
+                    </div>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <div class="col-sm p-3 min-vh-100">
+      <!--add-student content -->
+      <section style="background-color: white;" class="rounded-7">
+        <i class="bi bi-arrow-left my-3 p-3" style="font-size: 2.5rem;" routerLink="/studentList"></i>
+        <div class="container py-1">
+
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card mb-4">
+                <div class="card-body text-center">
+                  <img src="{{studentObj.image}}" alt="avatar"
+                    class="rounded-circle img-fluid" style="width: 150px;">
+                  <h5 class="my-3">{{studentObj.first_name}} {{studentObj.last_name}}</h5>
+                  <p class="text-muted mb-1 badge badge-warning">{{studentObj.proffesion}}</p>
+                  <p class="text-muted mb-4"><i class="bi bi-geo-alt-fill" style="color:rgb(20, 199, 74)"></i> {{studentObj.location}}</p>
+                  <div class="d-flex justify-content-center mb-2">
+                    <button type="button" class="btn btn-primary" routerLink="/addMark">Add mark</button>
+                    <button type="button" class="btn btn-outline-danger ms-1">Delete</button>
+                  </div>
+                </div>
+              </div>
+              <div class="card mb-4">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-3">
+                      <p class="mb-0">Name</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0">{{studentObj.first_name}}</p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Surname</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0">{{studentObj.last_name}}</p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Age</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0">{{studentObj.age}}</p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Gender</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0">{{studentObj.gender}}</p>
+                    </div>
+                  </div>
+                  <hr>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="card mb-4">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Proffesion</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0">{{studentObj.proffesion}}</p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Email</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0">{{studentObj.email}}</p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Phone</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0">{{studentObj.phone_number}}</p>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <p class="mb-0">Address</p>
+                    </div>
+                    <div class="col-sm-9">
+                      <p class="text-muted mb-0">{{studentObj.location}}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-11">
+                    <div class="card-body rounded-7">
+                      <img src="https://img.freepik.com/premium-vector/guy-running-upward-graphic-with-phone-headphones-isolated-white-background_323758-148.jpg?w=1380"
+                        class="img-fluid" alt="Sample image">
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
